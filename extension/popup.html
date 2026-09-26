@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 13px/1.4 system-ui, sans-serif; width: 320px; margin: 0; padding: 14px; color: #222; }
+  h1 { font-size: 15px; margin: 0 0 4px; color: #ff4081; }
+  .hint { color: #666; font-size: 12px; margin-bottom: 10px; }
+  label { display: block; margin: 8px 0 3px; font-weight: 600; }
+  input[type=text], input[type=number] { width: 100%; box-sizing: border-box; padding: 6px; border: 1px solid #ccc; border-radius: 4px; }
+  .row { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+  .row label { margin: 0; font-weight: 400; }
+  button { width: 100%; margin-top: 10px; padding: 9px; border: 0; border-radius: 5px; background: #ff4081; color: #fff; font-weight: 600; cursor: pointer; }
+  button.secondary { background: #333; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  #status { margin-top: 10px; font-size: 12px; color: #444; min-height: 16px; }
+</style>
+</head>
+<body>
+  <h1>Dot &amp; Key Scraper</h1>
+  <div class="hint" id="pageInfo">Open a dotandkey.com product or collection page.</div>
+
+  <label for="collection">Collection handle</label>
+  <input type="text" id="collection" value="shop-all">
+
+  <label for="max">Max products (0 = all)</label>
+  <input type="number" id="max" value="0" min="0">
+
+  <label for="metaKey">JSON metafield (namespace.key)</label>
+  <input type="text" id="metaKey" value="custom.product_data">
+
+  <div class="row"><input type="checkbox" id="json" checked><label for="json">Also download raw JSON file</label></div>
+
+  <button id="scrapeProduct">Scrape this product</button>
+  <button id="scrapeCollection" class="secondary">Scrape whole collection</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Dot & Key Product Scraper (Shopify CSV)",
+  "version": "1.0.0",
+  "description": "Scrapes Dot & Key products into a Shopify import CSV with all extra PDP data in a JSON metafield.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.dotandkey.com/*", "https://dotandkey.com/*"],
+  "action": {
+    "default_title": "Dot & Key Scraper",
+    "default_popup": "popup.html"
+  }
+}
